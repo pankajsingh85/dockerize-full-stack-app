@@ -18,6 +18,6 @@ export class SearchService {
   }
 
   search(product:ProductModel){
-    return this.http.post<ProductModel[]>(`${environment.apiUrl}/search`,product);
+    return this.http.post<ProductModel[]>(`api/search`,product);
   }
 }

@@ -30,10 +30,10 @@ export class ServiceabilityService {
   
 
   getAll() {
-    return this.http.get<Service[]>(`${environment.apiUrl}/getData`);
+    return this.http.get<Service[]>(`api/getData`);
   }
   create(service:Service) {
-    return this.http.post<Service[]>(`${environment.apiUrl}/addData`, service);
+    return this.http.post<Service[]>(`api/addData`, service);
   }
 
   delete(id: number) {

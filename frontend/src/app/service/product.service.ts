@@ -28,44 +28,44 @@ export class ProductService {
   }
   
   getAll() {
-    return this.http.get<ProductModel[]>(`${environment.apiUrl}/view`);
+    return this.http.get<ProductModel[]>(`api/view`);
   }
 
   getPrice(productCode:Number){
-    return this.http.get<ProductModel[]>(`${environment.apiUrl}/view/${productCode}`);
+    return this.http.get<ProductModel[]>(`api/view/${productCode}`);
   }
 
   getDetails(productCode:Number){
-    return this.http.get<ProductModel[]>(`${environment.apiUrl}/details/${productCode}`);
+    return this.http.get<ProductModel[]>(`api/details/${productCode}`);
   }
 
 
   filterPrice(product:ProductModel){
-    return this.http.post<ProductModel[]>(`${environment.apiUrl}/filter`,product);
+    return this.http.post<ProductModel[]>(`api/filter`,product);
   }
 
  
 
   create(formData:any) {
-    return this.http.post<ProductModel[]>(`${environment.apiUrl}/create`, formData);
+    return this.http.post<ProductModel[]>(`api/create`, formData);
   }
   delete(productCode: number) {
-    return this.http.get<ProductModel[]>(`${environment.apiUrl}/delete/${productCode}`);
+    return this.http.get<ProductModel[]>(`api/delete/${productCode}`);
   }
 
   edit(productCode:number){
-    return this.http.get<ProductModel[]>(`${environment.apiUrl}/edit/${productCode}`);
+    return this.http.get<ProductModel[]>(`api/edit/${productCode}`);
    }
    update(formData:any){
-    return this.http.post<ProductModel[]>(`${environment.apiUrl}/update`,formData);
+    return this.http.post<ProductModel[]>(`api/update`,formData);
    }
 
    checkProductCode(product:ProductModel){
-    return this.http.post<ProductModel[]>(`${environment.apiUrl}/checkProduct`,product);
+    return this.http.post<ProductModel[]>(`api/checkProduct`,product);
   }
 
    
   checkPinCode(service:Service){
-    return this.http.post<Service[]>(`${environment.apiUrl}/checkData`,service);
+    return this.http.post<Service[]>(`api/checkData`,service);
   }
 }

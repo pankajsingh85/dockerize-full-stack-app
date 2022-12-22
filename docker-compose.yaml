@@ -25,11 +25,8 @@ services:
     ports:
     - "3050:80"
 
-
   angular: 
-   build: frontend # specify the directory of the Dockerfile
-  # ports:
-  # - "4200:4200" # specify port mapping
+   build: frontend 
 
   node: # name of the second service
     build: backend # specify the directory of the Dockerfile
@@ -38,9 +35,6 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root1234
       MYSQL_HOST_IP: db
-    # ports:
-    # - "5000:5000"
-    # network_mode: "host"
     depends_on:
       - db
 

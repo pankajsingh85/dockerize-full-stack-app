@@ -18,13 +18,13 @@ export class UserService {
   }
  
   login(user:UserModel){
-    return this.http.post<UserModel[]>(`${environment.apiUrl}/getUser`,user);
+    return this.http.post<UserModel[]>(`api/getUser`,user);
   }
   register(user:UserModel){
-    return this.http.post<UserModel[]>(`${environment.apiUrl}/addUser`,user);
+    return this.http.post<UserModel[]>(`api/addUser`,user);
   }
   checkUser(user:UserModel){
-    return this.http.post<UserModel[]>(`${environment.apiUrl}/checkUser`,user);
+    return this.http.post<UserModel[]>(`api/checkUser`,user);
   }
 }
 

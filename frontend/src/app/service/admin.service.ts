@@ -18,9 +18,9 @@ export class AdminService {
   }
 
   login(user:Admin){
-    return this.http.post<Admin[]>(`${environment.apiUrl}/getAdmin`,user);
+    return this.http.post<Admin[]>(`api/getAdmin`,user);
   }
   register(user:Admin){
-    return this.http.post<Admin[]>(`${environment.apiUrl}/addAdmin`,user);
+    return this.http.post<Admin[]>(`api/addAdmin`,user);
   }
 }
